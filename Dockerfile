@@ -24,9 +24,9 @@ RUN python -m venv /py && \
 	apk del .tmp-build-deps && \
 	adduser \
 		--disabled-password \
-		--no-create-home \
 		django-user
 
 ENV PATH="/py/bin:$PATH"
 
+# RUN chown -R 100:101 /home/django-user/
 USER django-user
